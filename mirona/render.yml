@@ -1,0 +1,13 @@
+# render.yml
+
+services:
+  - type: web
+    name: mirona-industry
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python manage.py runserver
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
